@@ -1,0 +1,113 @@
+
+// fonts
+@import url('https://fonts.googleapis.com/css?family=Roboto Slab');
+
+$font-family-sans-serif: "Roboto Slab", sans-serif !default;
+$presentation-heading-font: "Roboto Slab", sans-serif !default;
+$presentation-block-margin: 12px !default;
+$presentation-slide-text-align: justify !default;
+
+/*-- scss:rules --*/
+ 
+.reveal .slide-number {
+  font-size: 20px !important;
+  font-weight: bold !important;
+}
+
+
+
+.reveal .autor{
+  font-size: 1.1em;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 400px;
+
+}
+.reveal .subtitle{
+  font-size: 1.1em;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0px;
+
+}
+
+h3{
+  color: #23373B !important;
+}
+ h2 {
+   color:#FAFAFA !important;
+  border: 20px solid #23373B; /* Define a espessura, o estilo e a cor da borda */
+  background-color: #23373B;
+
+
+}
+h4{
+    margin:30px !important;
+
+}
+h3
+{
+    margin:30px !important;
+
+}
+figcaption{
+      margin:30px !important;
+
+  
+}
+img{
+      margin:30px !important;
+}
+
+li{
+    margin:30px !important;
+
+}
+
+
+p{
+    margin:30px !important;
+
+}
+
+
+
+
+.reveal .title {
+  font-size: 1.5em;
+  color: #FAFAFA;
+  border-radius: 25px;
+  border: 20px solid #23373B;
+  background-color: #23373B;
+  position: absolute; 
+  left: 10px; 
+  right: 10px;
+  top: 170px;
+
+}
+
+.reveal .universidade{
+   position: absolute;
+    bottom: 20px;
+    left:   30px;
+    height: 190px;
+    width: 210px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("ufam.jpg");
+}
+
+.reveal .programa{
+   position: absolute;
+    bottom: 0px;
+    right:   30px;
+    height: 190px;
+    width: 300px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("icomp.png");
+}
+
+

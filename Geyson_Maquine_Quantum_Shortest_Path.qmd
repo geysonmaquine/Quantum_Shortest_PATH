@@ -1,0 +1,26 @@
+---
+title: "Caminhos Mínimos Quânticos"
+subtitle: "Universidade Federal do Amazonas<br>Pró-Reitoria de Pesquisa e Pós-Graduação<br>Programa de Pós-Graduação em Informática"
+author: "[Geyson Maquiné Batalha]{.autor}[]{.universidade}[]{.programa}"
+lang: pt
+format:
+  revealjs:
+    theme: ["estilo.scss"]
+    slide-number: c/t
+    margin: 0
+    fig-cap-location: "top"
+    height: 900
+    width: 1600
+editor: visual
+bibliography: ref.bib
+---
+
+## Roteiro
+
+## Indrodução
+
+## Referências
+
+::: {#refs}
+:::
+
