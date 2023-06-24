@@ -17,7 +17,7 @@ bibliography: ref.bib
 
 ## Roteiro
 
-windos 10 sjdkajdjka
+assim que dada a medida vamos esperar com vai ser
 
 ## Indrodução
 https://github.com/geysonmaquine/Quantum_Shortest_PATH
