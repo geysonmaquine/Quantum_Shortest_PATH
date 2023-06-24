@@ -17,7 +17,10 @@ bibliography: ref.bib
 
 ## Roteiro
 
+windos 10
+
 ## Indrodução
+https://github.com/geysonmaquine/Quantum_Shortest_PATH
 
 ## Referências
 
