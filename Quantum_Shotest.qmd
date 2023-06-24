@@ -1,6 +1,7 @@
 ---
 title: "Caminhos Mínimos Quânticos"
-
+subtitle: "Universidade Federal do Amazonas<br>Pró-Reitoria de Pesquisa e Pós-Graduação<br>Programa de Pós-Graduação em Informática"
+author: "[Geyson Maquiné Batalha]{.autor}[]{.universidade}[]{.programa}"
 lang: pt
 format:
   revealjs:
@@ -15,6 +16,12 @@ bibliography: ref.bib
 ---
 
 ## Roteiro
+
+- um dois 3
+  + um doi 3
+    + sdksmm 
+
+
 ## Indrodução
 https://github.com/geysonmaquine/Quantum_Shortest_PATH
 
