@@ -1,0 +1,25 @@
+---
+title: "Caminhos Mínimos Quânticos"
+
+lang: pt
+format:
+  revealjs:
+    theme: ["estilo.scss"]
+    slide-number: c/t
+    margin: 0
+    fig-cap-location: "top"
+    height: 900
+    width: 1600
+editor: visual
+bibliography: ref.bib
+---
+
+## Roteiro
+## Indrodução
+https://github.com/geysonmaquine/Quantum_Shortest_PATH
+
+## Referências
+
+::: {#refs}
+:::
+
