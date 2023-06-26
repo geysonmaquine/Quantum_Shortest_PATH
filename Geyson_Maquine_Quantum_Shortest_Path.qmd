@@ -9,21 +9,50 @@ format:
     slide-number: c/t
     margin: 0
     fig-cap-location: "top"
-    height: 900
-    width: 1600
+    height: 1080
+    width: 1920
 editor: visual
 bibliography: ref.bib
 ---
 
-## Roteiro
+## Física Clássica X Física Quântica
 
-assim que dada a medida vamos esperar com vai ser
+::: columns
+::: {.column style="font-size:32px; width=50%"}
+### Clássico
 
-## Indrodução
-https://github.com/geysonmaquine/Quantum_Shortest_PATH
+- Fenômenos Determinísticos
+
+- Nível Atômico ou Macroscópico <br>
+![](img/classical_quantum.jpg){width="400px" fig-align="center"}
+
+:::
+
+::: {.column style="font-size:32px; width=50%"}
+### Quântico
+
+-   Fenômenos Não-Determinísticos (Probabílisticos)
+-   Nivel Subatômico (Onda-Partícula)
+    -   Bósons (Ex: Fótons)
+    -   Férmions (Ex: Elétrons)
+
+![](img/sub.png){width="650px" fig-align="center"}
+:::
+:::
+
+## Fundamentos da Mecânica Quântica
+
+![](img/Fudanmentos_QM.svg){height=800px fig-align="center"}
+
+
+## The Qubit Game [^1] 
+
+![](img/qubit_game.png){height=800px fig-align="center"}
+
+[^1]: Link: [https://quantumai.google/education/thequbitgame](https://quantumai.google/education/thequbitgame)
+
 
 ## Referências
 
 ::: {#refs}
 :::
-

@@ -10,7 +10,7 @@ $presentation-slide-text-align: justify !default;
 /*-- scss:rules --*/
  
 .reveal .slide-number {
-  font-size: 20px !important;
+  font-size: 25px !important;
   font-weight: bold !important;
 }
 
@@ -21,7 +21,7 @@ $presentation-slide-text-align: justify !default;
   position: absolute;
   left: 0;
   right: 0;
-  top: 400px;
+  top: 420px;
 
 }
 .reveal .subtitle{
@@ -29,7 +29,7 @@ $presentation-slide-text-align: justify !default;
   position: absolute;
   left: 0;
   right: 0;
-  bottom: 0px;
+  bottom: 50px;
 
 }
 
@@ -84,13 +84,13 @@ p{
   position: absolute; 
   left: 10px; 
   right: 10px;
-  top: 170px;
+  top: 190px;
 
 }
 
 .reveal .universidade{
    position: absolute;
-    bottom: 20px;
+    bottom: 70px;
     left:   30px;
     height: 190px;
     width: 210px;
@@ -101,7 +101,7 @@ p{
 
 .reveal .programa{
    position: absolute;
-    bottom: 0px;
+    bottom: 50px;
     right:   30px;
     height: 190px;
     width: 300px;
