@@ -15,17 +15,64 @@ editor: visual
 bibliography: ref.bib
 ---
 
+## Problema do Caminho Mínimo
+
+-   Determinar o caminho de menor custo entre dois vértices
+
+- Aplicações
+  - Distância Geoespacial (Ex: Waze, Google Maps..)
+  - Sequênciamento de Produção
+  - Redes de Roteamento (transporte de dados)
+  - Logística
+
+## Problema do Caminho Mínimo
+
+
+::: columns
+::: {.column style="font-size:32px; width=50%"}
+-   Single-source shortest path problem (com origem)
+    -   Algoritmo de Dijkstra (arestas com  pesos positivos)
+    -   Algoritmo de Bellman-Ford (arestas com pesos positivos ou negativos)
+-   All-pairs shortest path problem (pares de vértices)
+    -   Algoritmo de Floyd-Warshall
+    -   Algoritmo de Johnson
+:::
+
+::: {.column style="font-size:32px; width=50%"}
+
+| **DIJKSTRA**(G, w, s)
+|   para cada vértice v $\in$ V[G] faça
+|       d[v]$\leftarrow\infty$
+|       $\pi$[v]$\leftarrow$ NULL
+|   d[s] $\leftarrow$ 0
+|   S$\leftarrow\emptyset$
+|   Q$\leftarrow$ V[G]
+|   enquanto Q$\neq\emptyset$ faça
+|       u$\leftarrow$ EXTRACT-MIN(Q)
+|       S$\leftarrow$ S $\cup$ {u}
+|       para cada vértice v $\in$ Adj[u] faça
+|           se d[v]>d[u]+w(u,v) faça
+|               d[v]=d[u]+w(u,v)
+|               $\pi$[v]$\leftarrow$u
+|   Tempo de execução: O($|V|^2$), O($(|V|+|E|)\log|V|$) (heap),
+|   O($|V|\log |V|+|E|$) (heap-fibo).
+
+:::
+:::
+
+## Algortimo de Dijkstra
+
+![](img/dijktra.png){height="800px" fig-align="center"}
+
 ## Física Clássica X Física Quântica
 
 ::: columns
 ::: {.column style="font-size:32px; width=50%"}
 ### Clássico
 
-- Fenômenos Determinísticos
+-   Fenômenos Determinísticos
 
-- Nível Atômico ou Macroscópico <br>
-![](img/classical_quantum.jpg){width="400px" fig-align="center"}
-
+-   Nível Atômico ou Macroscópico <br> ![](img/classical_quantum.jpg){width="400px" fig-align="center"}
 :::
 
 ::: {.column style="font-size:32px; width=50%"}
@@ -42,17 +89,99 @@ bibliography: ref.bib
 
 ## Fundamentos da Mecânica Quântica
 
-![](img/Fudanmentos_QM.svg){height=800px fig-align="center"}
+![](img/Fudanmentos_QM.svg){height="800px" fig-align="center"}
+
+## Algoritmos Quânticos
+
+![](img/algo_q.svg){height="850px" fig-align="center"}
 
 
-## The Qubit Game [^1] 
+## Caminhos Mínimos Quânticos
 
-![](img/qubit_game.png){height=800px fig-align="center"}
+::: columns
+::: {.column style="font-size:32px; width=50%"}
+![](img/quantum_Graph.png){height="500px" fig-align="center"}
 
-[^1]: Link: [https://quantumai.google/education/thequbitgame](https://quantumai.google/education/thequbitgame)
+::: {layout-ncol=2}
+###
+- Lista de Adjacências
+
+  - $O(\sqrt{nm}\log^2n)$
+
+###
+- Matriz Adjacência
+
+  - $O(n^{1.5}\log^2n)$
+:::
+:::
+
+::: {.column style="font-size:32px; width=50%"}
+| **DIJKSTRA-Q**(G,w,s)
+|   T$\leftarrow$({s},$\emptyset$), l $\leftarrow$ 1, $P_l\leftarrow\{s\}$, c$\leftarrow \emptyset$   
+|   enquanto V(T)$\neq$V(G) faça
+|       d$\leftarrow$|$P_l$|
+|       $A_l$$\leftarrow$ MIN-FIND(f,g,d) 
+|       escolha (u,v) $\in$ E: 
+|           c(u,v)=min{w(x,y)|(x,y) $\in \cup_i A_i$, y $\notin \cup_i P_i$ }
+|       V(T)$\leftarrow$ V(T) $\cup$ {v}
+|       E(T)$\leftarrow$ E(T) $\cup$ {(u,v)} 
+|       $P_{l+1}$$\leftarrow${v}
+|       l$\leftarrow$l+1
+|       se l$\geq$ 2 e$|P_{l+1}|\neq|P_l|$ então
+|           $P_{l-1}\leftarrow P_{l-1}\cup P_l$
+|           l$\leftarrow$l-1
+
+:::
+:::
 
 
+## Caminhos Mínimos Quânticos
+
+::: columns
+::: {.column style="font-size:32px; width=50%"}
+![](img/quantum_dim.png){height="500px" fig-align="center"}
+
+::: {layout-ncol=2}
+###
+- Lista de Adjacências
+
+  - $O(\sqrt{nm}\log n)$
+
+###
+- Matriz Adjacência
+
+  - $O(n^{1.5}\log n)$
+:::
+:::
+
+::: {.column style="font-size:32px; width=50%"}
+
+### Algoritmo
+- $v_s$ é o vertice incial
+- h[i] é o tamanho dos menores caminhos de $v_s$ para $v_i$. Caso $v_i$ não alcança $v_s$ então h[i]=$\infty$.
+
+|   h $\leftarrow \{+\infty,\ldots,+\infty\}$
+|   h[s]=0
+|   para i $\leftarrow$ s+1 até N faça
+|       para j $\leftarrow$ 1 até $2\log_2N$
+|           $\small h[i]=\min(h[i],\min(h[j_1]+w(i,j_1),\ldots,h[j_u]+w(i,j_u)$)
+|   onde u=$d_i$, $D_i=(v_{j_1},\ldots,v_{j_u})$
+:::
+:::
+
+
+
+
+## The Qubit Game [^1]
+
+[^1]: Link: <https://quantumai.google/education/thequbitgame>
+
+![](img/qubit_game.png){height="800px" fig-align="center"}
+---
+nocite: |
+  @Khadiev_2019, @D_rr_2006, @cormen2009algorithms
+---
 ## Referências
 
-::: {#refs}
+::: {#refs style="margin:30px !important;"}
 :::

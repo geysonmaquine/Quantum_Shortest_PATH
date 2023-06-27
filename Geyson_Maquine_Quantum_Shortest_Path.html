@@ -356,6 +356,63 @@
 </div>
 
 </section>
+<section id="problema-do-caminho-mínimo" class="slide level2">
+<h2>Problema do Caminho Mínimo</h2>
+<ul>
+<li><p>Determinar o caminho de menor custo entre dois vértices</p></li>
+<li><p>Aplicações</p>
+<ul>
+<li>Distância Geoespacial (Ex: Waze, Google Maps..)</li>
+<li>Sequênciamento de Produção</li>
+<li>Redes de Roteamento (transporte de dados)</li>
+<li>Logística</li>
+</ul></li>
+</ul>
+</section>
+<section id="problema-do-caminho-mínimo-1" class="slide level2">
+<h2>Problema do Caminho Mínimo</h2>
+<div class="columns">
+<div class="column" style="font-size:32px; width=50%">
+<ul>
+<li>Single-source shortest path problem (com origem)
+<ul>
+<li>Algoritmo de Dijkstra (arestas com pesos positivos)</li>
+<li>Algoritmo de Bellman-Ford (arestas com pesos positivos ou negativos)</li>
+</ul></li>
+<li>All-pairs shortest path problem (pares de vértices)
+<ul>
+<li>Algoritmo de Floyd-Warshall</li>
+<li>Algoritmo de Johnson</li>
+</ul></li>
+</ul>
+</div><div class="column" style="font-size:32px; width=50%">
+<p><strong>DIJKSTRA</strong>(G, w, s)<br>
+&nbsp;&nbsp;para cada vértice v <span class="math inline">\(\in\)</span> V[G] faça<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;d[v]<span class="math inline">\(\leftarrow\infty\)</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="math inline">\(\pi\)</span>[v]<span class="math inline">\(\leftarrow\)</span> NULL<br>
+&nbsp;&nbsp;d[s] <span class="math inline">\(\leftarrow\)</span> 0<br>
+&nbsp;&nbsp;S<span class="math inline">\(\leftarrow\emptyset\)</span><br>
+&nbsp;&nbsp;Q<span class="math inline">\(\leftarrow\)</span> V[G]<br>
+&nbsp;&nbsp;enquanto Q<span class="math inline">\(\neq\emptyset\)</span> faça<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;u<span class="math inline">\(\leftarrow\)</span> EXTRACT-MIN(Q)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;S<span class="math inline">\(\leftarrow\)</span> S <span class="math inline">\(\cup\)</span> {u}<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;para cada vértice v <span class="math inline">\(\in\)</span> Adj[u] faça<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;se d[v]&gt;d[u]+w(u,v) faça<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;d[v]=d[u]+w(u,v)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="math inline">\(\pi\)</span>[v]<span class="math inline">\(\leftarrow\)</span>u<br>
+&nbsp;&nbsp;Tempo de execução: O(<span class="math inline">\(|V|^2\)</span>), O(<span class="math inline">\((|V|+|E|)\log|V|\)</span>) (heap),<br>
+&nbsp;&nbsp;O(<span class="math inline">\(|V|\log |V|+|E|\)</span>) (heap-fibo).</p>
+</div>
+</div>
+</section>
+<section id="algortimo-de-dijkstra" class="slide level2">
+<h2>Algortimo de Dijkstra</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/dijktra.png" height="800"></p>
+</figure>
+</div>
+</section>
 <section id="física-clássica-x-física-quântica" class="slide level2">
 <h2>Física Clássica X Física Quântica</h2>
 <div class="columns">
@@ -391,6 +448,109 @@
 </figure>
 </div>
 </section>
+<section id="algoritmos-quânticos" class="slide level2">
+<h2>Algoritmos Quânticos</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/algo_q.svg" height="850"></p>
+</figure>
+</div>
+</section>
+<section id="caminhos-mínimos-quânticos" class="slide level2">
+<h2>Caminhos Mínimos Quânticos</h2>
+<div class="columns">
+<div class="column" style="font-size:32px; width=50%">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/quantum_Graph.png" height="500"></p>
+</figure>
+</div>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><strong></strong></p>
+<ul>
+<li><p>Lista de Adjacências</p>
+<ul>
+<li><span class="math inline">\(O(\sqrt{nm}\log^2n)\)</span></li>
+</ul></li>
+</ul>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><strong></strong></p>
+<ul>
+<li><p>Matriz Adjacência</p>
+<ul>
+<li><span class="math inline">\(O(n^{1.5}\log^2n)\)</span></li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+</div><div class="column" style="font-size:32px; width=50%">
+<p><strong>DIJKSTRA-Q</strong>(G,w,s)<br>
+&nbsp;&nbsp;T<span class="math inline">\(\leftarrow\)</span>({s},<span class="math inline">\(\emptyset\)</span>), l <span class="math inline">\(\leftarrow\)</span> 1, <span class="math inline">\(P_l\leftarrow\{s\}\)</span>, c<span class="math inline">\(\leftarrow \emptyset\)</span><br>
+&nbsp;&nbsp;enquanto V(T)<span class="math inline">\(\neq\)</span>V(G) faça<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;d<span class="math inline">\(\leftarrow\)</span>|<span class="math inline">\(P_l\)</span>|<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="math inline">\(A_l\)</span><span class="math inline">\(\leftarrow\)</span> MIN-FIND(f,g,d)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;escolha (u,v) <span class="math inline">\(\in\)</span> E:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;c(u,v)=min{w(x,y)|(x,y) <span class="math inline">\(\in \cup_i A_i\)</span>, y <span class="math inline">\(\notin \cup_i P_i\)</span> }<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;V(T)<span class="math inline">\(\leftarrow\)</span> V(T) <span class="math inline">\(\cup\)</span> {v}<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;E(T)<span class="math inline">\(\leftarrow\)</span> E(T) <span class="math inline">\(\cup\)</span> {(u,v)}<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="math inline">\(P_{l+1}\)</span><span class="math inline">\(\leftarrow\)</span>{v}<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;l<span class="math inline">\(\leftarrow\)</span>l+1<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;se l<span class="math inline">\(\geq\)</span> 2 e<span class="math inline">\(|P_{l+1}|\neq|P_l|\)</span> então<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="math inline">\(P_{l-1}\leftarrow P_{l-1}\cup P_l\)</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;l<span class="math inline">\(\leftarrow\)</span>l-1</p>
+</div>
+</div>
+</section>
+<section id="caminhos-mínimos-quânticos-1" class="slide level2">
+<h2>Caminhos Mínimos Quânticos</h2>
+<div class="columns">
+<div class="column" style="font-size:32px; width=50%">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/quantum_dim.png" height="500"></p>
+</figure>
+</div>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><strong></strong></p>
+<ul>
+<li><p>Lista de Adjacências</p>
+<ul>
+<li><span class="math inline">\(O(\sqrt{nm}\log n)\)</span></li>
+</ul></li>
+</ul>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><strong></strong></p>
+<ul>
+<li><p>Matriz Adjacência</p>
+<ul>
+<li><span class="math inline">\(O(n^{1.5}\log n)\)</span></li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+</div><div class="column" style="font-size:32px; width=50%">
+<h3 id="algoritmo">Algoritmo</h3>
+<ul>
+<li><span class="math inline">\(v_s\)</span> é o vertice incial</li>
+<li>h[i] é o tamanho dos menores caminhos de <span class="math inline">\(v_s\)</span> para <span class="math inline">\(v_i\)</span>. Caso <span class="math inline">\(v_i\)</span> não alcança <span class="math inline">\(v_s\)</span> então h[i]=<span class="math inline">\(\infty\)</span>.</li>
+</ul>
+<p>&nbsp;&nbsp;h <span class="math inline">\(\leftarrow \{+\infty,\ldots,+\infty\}\)</span><br>
+&nbsp;&nbsp;h[s]=0<br>
+&nbsp;&nbsp;para i <span class="math inline">\(\leftarrow\)</span> s+1 até N faça<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;para j <span class="math inline">\(\leftarrow\)</span> 1 até <span class="math inline">\(2\log_2N\)</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="math inline">\(\small h[i]=\min(h[i],\min(h[j_1]+w(i,j_1),\ldots,h[j_u]+w(i,j_u)\)</span>)<br>
+&nbsp;&nbsp;onde u=<span class="math inline">\(d_i\)</span>, <span class="math inline">\(D_i=(v_{j_1},\ldots,v_{j_u})\)</span></p>
+</div>
+</div>
+</section>
 <section id="the-qubit-game-1" class="slide level2">
 <h2>The Qubit Game <sup>1</sup></h2>
 <div class="quarto-figure quarto-figure-center">
@@ -398,11 +558,19 @@
 <p><img data-src="img/qubit_game.png" height="800"></p>
 </figure>
 </div>
-<aside><ol class="aside-footnotes"><li id="fn1"><p>Link: <a href="https://quantumai.google/education/thequbitgame">https://quantumai.google/education/thequbitgame</a></p></li></ol></aside></section>
+<aside><ol class="aside-footnotes"><li id="fn1"><p>Link: <a href="https://quantumai.google/education/thequbitgame" class="uri">https://quantumai.google/education/thequbitgame</a></p></li></ol></aside></section>
 <section id="referências" class="slide level2 smaller scrollable">
 <h2>Referências</h2>
-<div id="refs" role="list">
-
+<div id="refs" class="references csl-bib-body hanging-indent" style="margin:30px !important;" role="list">
+<div id="ref-cormen2009algorithms" class="csl-entry" role="listitem">
+Cormen, Thomas H., Charles E. Leiserson, Ronald L. Rivest, e Clifford Stein. 2009. <em>Algorithms: Teoria e Prática</em>. 3.ª ed. Rio de Janeiro: Editora Campus.
+</div>
+<div id="ref-D_rr_2006" class="csl-entry" role="listitem">
+Dürr, Christoph, Mark Heiligman, Peter HOyer, e Mehdi Mhalla. 2006. <span>«Quantum Query Complexity of Some Graph Problems»</span>. <em><span>SIAM</span> Journal on Computing</em> 35 (6): 1310–28. <a href="https://doi.org/10.1137/050644719">https://doi.org/10.1137/050644719</a>.
+</div>
+<div id="ref-Khadiev_2019" class="csl-entry" role="listitem">
+Khadiev, K. R., e L. I. Safina. 2019. <span>«Quantum Algorithm for Shortest Path Search in Directed Acyclic Graph»</span>. <em>Moscow University Computational Mathematics and Cybernetics</em> 43 (1): 47–51. <a href="https://doi.org/10.3103/s0278641919010023">https://doi.org/10.3103/s0278641919010023</a>.
+</div>
 </div>
 <div class="footer footer-default">
 
