@@ -1,5 +1,5 @@
 ---
-title: "Caminhos Mínimos Quânticos"
+title: "Uma Abordagem Quântica para Caminhos Mínimos"
 subtitle: "Universidade Federal do Amazonas<br>Pró-Reitoria de Pesquisa e Pós-Graduação<br>Programa de Pós-Graduação em Informática"
 author: "[Geyson Maquiné Batalha]{.autor}[]{.universidade}[]{.programa}"
 lang: pt
@@ -169,8 +169,31 @@ bibliography: ref.bib
 :::
 :::
 
+## Caminhadas Quânticas
+
+![](img/alice.svg){height="750px" fig-align="center"}
 
 
+
+## Caminhadas Quânticas
+
+![](img/artigos_quantum.svg){height="800px" fig-align="center"}
+
+## Caminhadas Quânticas: Exemplo [^2]
+
+::: columns
+::: {.column style="font-size:32px; width=50%"}
+ ![](img/8_white.jpg){width="650px" fig-align="center"}
+:::
+
+::: {.column style="font-size:32px; width=50%"}
+
+
+![](img/fast.gif){width="600px" fig-align="center"}
+:::
+:::
+
+[^2]:  Link: <https://github.com/qiskit-community/qiskit-community-tutorials/blob/master/terra/qis_adv/quantum_walk.ipynb>
 
 ## The Qubit Game [^1]
 
