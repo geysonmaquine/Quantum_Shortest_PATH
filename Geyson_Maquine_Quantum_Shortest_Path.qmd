@@ -195,14 +195,21 @@ bibliography: ref.bib
 
 [^2]:  Link: <https://github.com/qiskit-community/qiskit-community-tutorials/blob/master/terra/qis_adv/quantum_walk.ipynb>
 
+## Caminhadas Quânticas: Exemplo
+
+![](img/prota_Ex.svg){height="750px" fig-align="center"}
+
+## Softwares Disponíveis 
+![](img/lingua.png){height="850px" fig-align="center"}
+
 ## The Qubit Game [^1]
 
 [^1]: Link: <https://quantumai.google/education/thequbitgame>
 
-![](img/qubit_game.png){height="800px" fig-align="center"}
+![](img/qubit_game.png){height="750px" fig-align="center"}
 ---
 nocite: |
-  @Khadiev_2019, @D_rr_2006, @cormen2009algorithms
+  @Khadiev_2019, @D_rr_2006, @cormen2009algorithms, @Farhi_1998, @Aharonov_1993, @Childs_2009
 ---
 ## Referências
 
