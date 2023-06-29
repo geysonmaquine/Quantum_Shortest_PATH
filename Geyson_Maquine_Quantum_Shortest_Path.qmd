@@ -95,6 +95,9 @@ bibliography: ref.bib
 
 ![](img/algo_q.svg){height="850px" fig-align="center"}
 
+## Algoritmos Quânticos: Estrutura
+
+![](img/Full.svg){height="800px" fig-align="center"}
 
 ## Caminhos Mínimos Quânticos
 
@@ -199,8 +202,10 @@ bibliography: ref.bib
 
 ![](img/prota_Ex.svg){height="750px" fig-align="center"}
 
-## Softwares Disponíveis 
-![](img/lingua.png){height="850px" fig-align="center"}
+## Softwares Disponíveis[^3]
+![](img/lingua.png){height="800px" fig-align="center"}
+
+[^3]: Fingerhuth, M., Babej, T., & Wittek, P. (2018). Open source software in quantum computing. PLOS ONE, 13(12).
 
 ## The Qubit Game [^1]
 
@@ -209,7 +214,7 @@ bibliography: ref.bib
 ![](img/qubit_game.png){height="750px" fig-align="center"}
 ---
 nocite: |
-  @Khadiev_2019, @D_rr_2006, @cormen2009algorithms, @Farhi_1998, @Aharonov_1993, @Childs_2009
+  @Khadiev_2019, @D_rr_2006, @cormen2009algorithms, @Farhi_1998, @Aharonov_1993, @Childs_2009, @Fingerhuth_2018
 ---
 ## Referências
 
